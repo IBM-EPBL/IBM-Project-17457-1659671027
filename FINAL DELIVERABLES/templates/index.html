@@ -1,0 +1,53 @@
+<html>
+    <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Early Detection of Chronic Kidney Disease using Machine Leaning </title>
+    <style>
+        body{text-align: center;
+}
+        input[type="number"]::placeholder{
+            font: 2px sans-serif;
+            color: gray;
+            align-items: center;
+        }
+
+        fieldset{
+            display: inline;
+        }
+    </style>
+    </head>
+    <body>
+        <h3> CHRONIC KIDNEY DISEASE PREDICTION </h3>
+        
+        <fieldset>
+            <legend>Enter your details for Prediction</legend>
+        <form action="{{ url_for('predict')}}"method="post">
+            <br>Hemoglobin <input type = "float" id="hemo" placeholder="Enter Hemoglobin level"><hr> <br>
+            
+            Red Blood Cells (RBC) <input type = "float" id="rc" placeholder="Enter RBC count" ><hr><br>
+
+            Specific Gravity <input type = "float" id="sg" placeholder="Enter Specific Gravity" ><hr><br>
+            
+            Albumin <input type = "float" id="al" placeholder="Enter the Albumin" ><hr><br>
+           
+            Searum Creatinite <input type = "float" id="sc" placeholder="Enter Searum Creatinite" ><hr><br>
+            
+            Hypertension <input type = "float" id="htn" placeholder="Enter Hypertension level"><hr><br>
+            
+            Sodium <input type = "float" id="sod" placeholder="Enter Sodium level"><hr><br>
+            
+            Blood Pressure <input type = "float" id="bp" placeholder="Enter Blood Pressure" ><hr><br>
+            
+            White Blood Cells <input type = "float" id="wc" placeholder="Enter WBC count" ><hr><br>
+            
+            Age <input type = "float" id="age" placeholder="Enter your Age">
+
+        </fieldset><br><br>
+                
+        <button type = "submit">PREDICT</button> 
+        {{prediction_text}}
+        </form>
+    </body>
+</html>
