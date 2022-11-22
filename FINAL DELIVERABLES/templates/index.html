@@ -1,0 +1,58 @@
+<html>
+    <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="wnameth=device-wnameth, initial-scale=1.0" />
+    <title> Early Detection of Chronic Knameney Disease using Machine Leaning </title>
+    <style>
+        body{text-align: center;
+}
+        input[type="number"]::placeholder{
+            font: 2px sans-serif;
+            color: gray;
+            align-items: center;
+        }
+
+        fieldset{
+            display: inline;
+        }
+    </style>
+    </head>
+    <body>
+        <h3> CHRONIC KnameNEY DISEASE PREDICTION </h3>
+        
+        <fieldset>
+            <legend>Enter your details for Prediction</legend>
+        <form action="{{ url_for('predict')}}"method="post">
+            <br>Hemoglobin <input type = "float" name="hemo" placeholder="Enter Hemoglobin level"><hr> <br>
+            
+            Red Blood Cells (RBC) <input type = "float" name="rc" placeholder="Enter RBC count" ><hr><br>
+
+            Specific Gravity <input type = "float" name="sg" placeholder="Enter Specific Gravity" ><hr><br>
+            
+            Albumin <input type = "float" name="al" placeholder="Enter the Albumin" ><hr><br>
+           
+            Searum Creatinite <input type = "float" name="sc" placeholder="Enter Searum Creatinite" ><hr><br>
+            
+            Hypertension <input type = "float" name="htn" placeholder="Enter Hypertension level"><hr><br>
+            
+            Sodium <input type = "float" name="sod" placeholder="Enter Sodium level"><hr><br>
+            
+            Blood Pressure <input type = "float" name="bp" placeholder="Enter Blood Pressure" ><hr><br>
+            
+            White Blood Cells <input type = "float" name="wc" placeholder="Enter WBC count" ><hr><br>
+            
+            Age <input type = "float" name="age" placeholder="Enter your Age">
+
+        </fieldset><br><br>
+                
+        <button type = "submit">PREDICT</button> 
+        <br/>
+       <div>
+        <h1 style="color:brown">
+            {{prediction_text}}
+        </h1>
+       </div>
+        </form>
+    </body>
+</html>
